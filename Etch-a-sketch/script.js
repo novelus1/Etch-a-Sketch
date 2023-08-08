@@ -4,9 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function createGrid(size) {
     gridContainer.innerHTML = "";
+    
+    const containerWidth = 400;
+    const cellSize = containerWidth / size;
 
-    gridContainer.style.gridTemplateColumns = `repeat(${size}, 15px)`;
-    gridContainer.style.gridTemplateRows = `repeat(${size}, 15px)`;
+    gridContainer.style.width = `${containerWidth}px`;
+    gridContainer.style.height = `${containerWidth}px`;
+    gridContainer.style.gridTemplateColumns = `repeat(${size}, ${cellSize}px)`;
+    gridContainer.style.gridTemplateRows = `repeat(${size}, ${cellSize}px)`;
 
     for (let row = 0; row < size; row++) {
       for (let col = 0; col < size; col++) {

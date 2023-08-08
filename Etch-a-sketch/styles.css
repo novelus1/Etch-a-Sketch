@@ -1,9 +1,31 @@
+body {
+  background-color: grey;
+}
+
 #grid-container {
   display: grid;
   grid-template-columns: repeat(16, 25px);
   grid-template-rows: repeat(16, 25px);
   justify-content: center;
   align-self: center;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+#grid-creator {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-self: center;
+  margin-top: 3rem;
+  gap: 5px;
+  font-weight: bold;
+}
+
+#create-grid-btn {
+  margin-left: 1rem;
+  font-weight: bold;
+  background-color: bisque;
 }
 
 .grid-cell {
